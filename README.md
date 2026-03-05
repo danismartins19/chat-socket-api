@@ -37,6 +37,30 @@ pnpm prisma:migrate --name conversas
 pnpm start:dev
 ```
 
+A API estará disponível em `http://localhost:3000`
+
+## 📚 Documentação Swagger
+
+Acesse a documentação interativa da API em:
+
+**`http://localhost:3000/api`**
+
+O Swagger disponibiliza:
+- ✅ Documentação completa de todos os endpoints HTTP
+- ✅ Schemas de request e response
+- ✅ Teste interativo de rotas (Try it out)
+- ✅ Autenticação JWT integrada (clique em "Authorize" e cole o token)
+
+**Nota**: Eventos WebSocket não aparecem no Swagger. Consulte [WEBSOCKET_DOCS.md](WEBSOCKET_DOCS.md) para documentação completa do WebSocket.
+
+### Como testar rotas protegidas no Swagger
+
+1. Execute `POST /auth/register` ou `POST /auth/login` para obter o `accessToken`
+2. Clique no botão **"Authorize"** (cadeado) no topo da página
+3. Cole o token JWT no campo (sem prefixo "Bearer")
+4. Clique em "Authorize" e depois "Close"
+5. Agora você pode testar as rotas protegidas (ex: `/messages/conversations`)
+
 ## Rotas HTTP
 
 ### Register
